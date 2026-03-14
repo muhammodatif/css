@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Flexbox Website Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        header,
+        nav,
+        main,
+        aside,
+        footer {
+            padding: 20px;
+            color: white;
+        }
+        
+        header {
+            background: #333;
+            text-align: center;
+        }
+        
+        nav {
+            background: #444;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        main {
+            background: #666;
+            flex: 3;
+            min-width: 250px;
+        }
+        
+        aside {
+            background: #888;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        footer {
+            background: #333;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin-right: 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Flexbox Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <main>
+            <h2>Main Content</h2>
+
+            <p>Aenean nec placerat nulla. Pellentesque sit amet fermentum mi. Vivamus eget sodales justo. Proin tincidunt blandit urna at pretium. Nulla accumsan scelerisque suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                ac turpis egestas. Nam luctus nisi in ipsum suscipit consequat. Ut scelerisque eros vel augue tempus lobortis sed quis justo. Etiam a neque porttitor, rhoncus felis elementum, condimentum justo. Sed malesuada felis vitae purus rutrum,
+                et congue nibh pellentesque. Donec lobortis enim ut pellentesque rutrum. Phasellus condimentum pretium massa, in rhoncus elit pulvinar ac. Sed ante quam, consectetur ut lacus vel, sodales blandit diam. Proin condimentum augue mauris, non
+                volutpat lacus imperdiet ac. Praesent justo eros, commodo quis tempus a, volutpat sit amet velit.</p>
+        </main>
+
+        <aside>
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+
+</body>
+
+</html>
